@@ -18,3 +18,11 @@ form {
 div {
     text-align: center;
 }
+
+#output {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+}
