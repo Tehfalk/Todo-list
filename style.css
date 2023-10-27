@@ -26,3 +26,11 @@ div {
     height: 200px;
     overflow-y: auto;
 }
+
+ul#taskList input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.completed {
+    text-decoration: line-through;
+}

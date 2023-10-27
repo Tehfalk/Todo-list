@@ -24,11 +24,22 @@ function addTask() {
         var checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         taskItem.appendChild(checkbox);
-        taskItem.appendChild(document.createTextNode(taskText));
+
+        var label = document.createElement("label");
+        label.textContent = taskText;
+        taskItem.appendChild(label);
+
+        checkbox.addEventListener("change", function() {
+            if (checkbox.checked) {
+                label.classList.add("completed");
+            } else {
+                label.classList.remove("completed");
+            }
+            updateTaskCount();
+        });
+
         taskList.appendChild(taskItem);
         taskInput.value = "";
-
-        checkbox.addEventListener("change", updateTaskCount);
     }
 }
 
