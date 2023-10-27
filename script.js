@@ -8,22 +8,6 @@ function addTask() {
         var checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         taskItem.appendChild(checkbox);
-        taskItem.appendChild(document.createTextNode(taskText));
-        taskList.appendChild(taskItem);
-        taskInput.value = "";
-    }
-}
-
-function addTask() {
-    var taskInput = document.getElementById("task");
-    var taskList = document.getElementById("taskList");
-    var taskText = taskInput.value.trim();
-
-    if (taskText !== "") {
-        var taskItem = document.createElement("li");
-        var checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        taskItem.appendChild(checkbox);
 
         var label = document.createElement("label");
         label.textContent = taskText;
